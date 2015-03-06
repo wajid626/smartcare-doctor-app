@@ -1,6 +1,6 @@
 package com.smartdoctor.analytic;
 
-import com.smartcare.smartdoctor.R;
+import com.smartdoctor.R;
 
 import android.app.Activity;
 import android.os.Bundle;

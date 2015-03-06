@@ -1,6 +1,6 @@
 package com.smartdoctor.tricoder;
 
-import com.smartcare.smartdoctor.R;
+import com.smartdoctor.R;
 
 import android.app.Activity;
 import android.app.TabActivity;

@@ -18,9 +18,9 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.smartcare.smartdoctor.R;
-import com.smartcare.smartdoctor.R.id;
-import com.smartcare.smartdoctor.R.layout;
+import com.smartdoctor.R;
+import com.smartdoctor.R.id;
+import com.smartdoctor.R.layout;
 import com.gimbal.logging.GimbalLogConfig;
 import com.gimbal.logging.GimbalLogLevel;
 import com.gimbal.proximity.Proximity;
