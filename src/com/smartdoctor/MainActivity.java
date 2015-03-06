@@ -34,7 +34,7 @@ public class MainActivity extends  TabActivity{
         ehrspec.setContent(ehrIntent);
          
         // Tab for Tricoder
-        TabSpec tricoderspec = tabHost.newTabSpec("Tricoder");        
+        TabSpec tricoderspec = tabHost.newTabSpec("Diagnostics");        
         tricoderspec.setIndicator("Tricoder", getResources().getDrawable(R.drawable.tricoder_tab));
         Intent tricoderIntent = new Intent(this, Tricoder.class);
         tricoderspec.setContent(tricoderIntent);
@@ -43,10 +43,10 @@ public class MainActivity extends  TabActivity{
         TabSpec trackerspec = tabHost.newTabSpec("Tracker");
         trackerspec.setIndicator("Tracker", getResources().getDrawable(R.drawable.device_tracking_tab));
         Intent trackerIntent = new Intent(this, TrackerActivity.class);
-        trackerspec.setContent(tricoderIntent);
+        trackerspec.setContent(trackerIntent);
         
         // Tab for Analytic
-        TabSpec analyticspec = tabHost.newTabSpec("Analytic");
+        TabSpec analyticspec = tabHost.newTabSpec("Analytics");
         analyticspec.setIndicator("Analytic", getResources().getDrawable(R.drawable.analytic_tab));
         Intent analyticIntent = new Intent(this, Analytic.class);
         analyticspec.setContent(analyticIntent);
@@ -61,8 +61,8 @@ public class MainActivity extends  TabActivity{
         // Adding all TabSpec to TabHost
         tabHost.addTab(ehrspec); // Adding EHR tab
         tabHost.addTab(tricoderspec); // Adding Tricoder tab
-        tabHost.addTab(trackerspec); // Adding Device Tracker tab
         tabHost.addTab(analyticspec); // Adding Analytic tab
+        tabHost.addTab(trackerspec); // Adding Device Tracker tab
         tabHost.addTab(alertsspec); // Adding Alerts tab
         
         tabHost.setCurrentTab(0);

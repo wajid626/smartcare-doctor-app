@@ -87,22 +87,21 @@ public class TrackerActivity extends Activity {
         menu.setMenu(R.layout.expantablelist);
         mVibrator = (Vibrator) getSystemService(Service.VIBRATOR_SERVICE);
         actionBar = getActionBar();
-        actionBar.setHomeButtonEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
+       // actionBar.setHomeButtonEnabled(true);
+        //actionBar.setDisplayHomeAsUpEnabled(true);
+        //actionBar.setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
         zoomin = (ImageView) findViewById(R.id.zoomin);
         zoomout = (ImageView) findViewById(R.id.zoomout);
         lockcenter = (ImageView) findViewById(R.id.lockcenter);
         endRouteButton = (Button) findViewById(R.id.stopRoute);
-       // pinMarkerButton = (Button) findViewById(R.id.pinMarker);
+        // pinMarkerButton = (Button) findViewById(R.id.pinMarker);
         distanceView = (TextView) findViewById(R.id.distanceView);
         distanceView.setVisibility(View.INVISIBLE);
         currentFloorDistanceView = (TextView) findViewById(R.id.currentFloorDistanceView);
         currentFloorDistanceView.setVisibility(View.INVISIBLE);
         msgView = (TextView) findViewById(R.id.msgView);
         msgView.setVisibility(View.INVISIBLE);
-
-
+ 
         floorList = (Spinner) findViewById(R.id.spinner);
 
         zoomin.setOnClickListener(controlListener);
@@ -116,7 +115,7 @@ public class TrackerActivity extends Activity {
         expandableListView.setOnChildClickListener(childClickListener);
 
         LocationRegion.FONT_LANGUAGE = LocationRegion.NORMAL;
-
+        
         //new a SAILS engine.
         mSails = new SAILS(this);
         //set location mode.
@@ -236,7 +235,7 @@ public class TrackerActivity extends Activity {
 
         //load first floor map in package.
         mSailsMapView.loadFloorMap(mSails.getFloorNameList().get(0));
-        actionBar.setTitle("Map POIs");
+        //actionBar.setTitle("Map POIs");
 
         //Auto Adjust suitable map zoom level and position to best view position.
         mSailsMapView.autoSetMapZoomAndView();
@@ -249,9 +248,11 @@ public class TrackerActivity extends Activity {
         ///mSailsMapView.getMarkerManager().setLocationRegionMarker(locationRegion, Marker.boundCenterBottom(getResources().getDrawable(R.drawable.destination)));
       //  Marker marker = new Marker(new GeoPoint(24.14022053389309, 120.6803128659729),Marker.boundCenter(getResources().getDrawable(R.drawable.arrow)));
         Marker marker = new Marker(new GeoPoint(24.140245 , 120.680300),Marker.boundCenter(getResources().getDrawable(R.drawable.circle)));
-        mSailsMapView.getRoutingManager().getPathPaint().setTextSize(12f);
-        mSailsMapView.getRoutingManager().getPathPaint().setTextScaleX(2f);
-        mSailsMapView.getRoutingManager().getPathStrokePaint().setStrokeWidth(0.01f);
+        mSailsMapView.getRoutingManager().getPathPaint().setTextSize(25f);
+        mSailsMapView.getRoutingManager().getPathPaint().setTextScaleX(4f);
+        mSailsMapView.getRoutingManager().getPathStrokePaint().setStrokeWidth(0.0001f);
+        
+
         TextOverlay textoverlay = new TextOverlay(new GeoPoint(24.140245 , 120.680300), "stethescope",   mSailsMapView.getRoutingManager().getPathPaint(),   mSailsMapView.getRoutingManager().getPathStrokePaint()); 
         TextListOverlay yourOverlay = new TextListOverlay(); 
         yourOverlay.getOverlayItems().add(textoverlay);
