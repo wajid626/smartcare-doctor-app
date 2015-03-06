@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds"
+        android:columnOrderPreserved="true"
+        android:columnCount="2">
+        
+    <TextView
+            android:text="Patient EHR Activity Monitor"
+            android:textSize="32dip"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal"/>
+    
+    <View style="@style/Divider"  android:layout_columnSpan="2" />
+    		
+    <TextView
+            android:text="Name:"
+            android:textSize="16dip"
+            android:layout_gravity="right"/>
+    <TextView
+			android:id="@+id/name"
+            android:ems="50"
+            android:textSize="16dip" />
+    
+	<TextView
+            android:text="Age:"
+            android:textSize="16dip"
+            android:layout_gravity="right"/>
+    <TextView
+        	android:id="@+id/age"
+            android:textSize="16dip" />
+    
+    
+	<TextView
+            android:text="Sex:"
+            android:textSize="16dip"
+            android:layout_gravity="right"/>
+    <TextView
+        	android:id="@+id/sex"
+            android:textSize="16dip" />
+      
+ 	<TextView
+            android:text="Address:"
+            android:textSize="16dip"
+            android:layout_gravity="right"/>
+    <TextView
+            android:id="@+id/address"
+            android:textSize="16dip" />
+    
+    <View style="@style/Divider"  android:layout_columnSpan="2" />
+    
+    <TextView
+            android:text="Medical History:"
+            android:textSize="20dip"
+            android:layout_gravity="left"/>
+    <TextView
+        	android:id="@+id/medHistoryCount"
+            android:textSize="20dip"
+            android:layout_gravity="left"/>
+    
+    <TableLayout
+            android:id="@+id/medHistTable"
+            android:layout_columnSpan="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shrinkColumns="*"
+            android:stretchColumns="*" >
+    </TableLayout>
+    
+    <View style="@style/Divider"  android:layout_columnSpan="2" />
+    
+    <TextView
+            android:text="Diagnosis/Notes:"
+            android:textSize="20dip"
+            android:layout_gravity="left"/>
+    <Space android:layout_gravity="fill" />
+
+    <EditText
+        android:id="@+id/diagnosisNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:ems="100"
+        android:layout_columnSpan="2"
+        android:inputType="textEmailAddress" />
+
+    <Button
+            android:text="Save"
+            android:onClick="saveDiagnosis"
+            android:layout_gravity="right" />
+</GridLayout>
+</ScrollView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alignmentMode="alignBounds"
+        android:columnCount="2"
+        android:columnOrderPreserved="true"
+        android:useDefaultMargins="true">
+
+        <TextView
+            android:layout_columnSpan="2"
+            android:layout_gravity="center_horizontal"
+            android:text="Patient Alert Monitor"
+            android:textSize="32dip"/>
+
+        <View
+            style="@style/Divider"
+            android:layout_columnSpan="2"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_columnSpan="2">
+
+            <TableLayout
+                android:id="@+id/alertTable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
+            </TableLayout>
+        </ScrollView>
+    </GridLayout>
+</LinearLayout>

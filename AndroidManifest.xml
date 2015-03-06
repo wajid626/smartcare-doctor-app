@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smartcare.smartdoctor"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	
+	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" />
+	    
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+   
+
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name"
+        android:hardwareAccelerated="true" android:theme="@style/AppTheme" >          
+        <activity android:name="com.smartcare.smartdoctor.SignInActivity" android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="proximityandroidreferenceapp" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.gimbal.service.ProximityService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.smartcare.smartdoctor" />
+            </intent-filter>
+        </service>
+        <!--  Main Activity with Tabs -->
+        <activity android:name="com.smartcare.smartdoctor.MainActivity" />
+        
+        <!--  Alert Activity -->
+        <activity android:name="com.smartdoctor.alert.Alerts" />
+         
+        <!--  Analytic Activity -->
+        <activity android:name="com.smartdoctor.analytic.Analytic" />
+         
+        <!--  DeviceTracker Activity -->
+        <activity android:name="com.smartdoctor.devicetracker.DeviceTracker" />
+        
+        <!--  Ehr Activity -->
+        <activity android:name="com.smartdoctor.ehr.EhrActivity" />
+        
+        <!--  Tricoder Activity -->
+        <activity android:name="com.smartdoctor.tricoder.Tricoder" />
+    </application>
+</manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SmartDoctor</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="smartcare_bookings">Smartcare</string>
+    <string name="sign_in">Sign In!</string>
+    <string name="sign_in_with">Physician App</string>
+	<string name="login_error">Invalid Credentials. Please try again</string>
+</resources>
