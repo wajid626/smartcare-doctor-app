@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.smartcare.smartdoctor"
+    package="com.smartdoctor"
     android:versionCode="1"
     android:versionName="1.0" >
 	
-	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" />
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
 	    
 	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -16,7 +16,7 @@
 
     <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name"
         android:hardwareAccelerated="true" android:theme="@style/AppTheme" >          
-        <activity android:name="com.smartcare.smartdoctor.SignInActivity" android:label="@string/app_name" >
+        <activity android:name="com.smartdoctor.SignInActivity" android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -31,11 +31,11 @@
         <service
             android:name="com.gimbal.service.ProximityService" android:exported="false">
             <intent-filter>
-                <action android:name="com.smartcare.smartdoctor" />
+                <action android:name="com.smartdoctor" />
             </intent-filter>
         </service>
         <!--  Main Activity with Tabs -->
-        <activity android:name="com.smartcare.smartdoctor.MainActivity" />
+        <activity android:name="com.smartdoctor.MainActivity" />
         
         <!--  Alert Activity -->
         <activity android:name="com.smartdoctor.alert.Alerts" />
@@ -44,7 +44,15 @@
         <activity android:name="com.smartdoctor.analytic.Analytic" />
          
         <!--  DeviceTracker Activity -->
-        <activity android:name="com.smartdoctor.devicetracker.DeviceTracker" />
+                <activity
+            android:name="com.smartdoctor.tracker.TrackerActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         
         <!--  Ehr Activity -->
         <activity android:name="com.smartdoctor.ehr.EhrActivity" />
