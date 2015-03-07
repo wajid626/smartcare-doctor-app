@@ -23,7 +23,7 @@ public class Analytic extends  Activity{
         //loads the WebView completely zoomed out
 		analyticWebView.getSettings().setLoadWithOverviewMode(true);
 		
-		String myHtml = "<iframe src=\"http://smartcare-services.elasticbeanstalk.com\"  frameborder='0' width='800' height='600'/>";
+		String myHtml = "<iframe src=\"http://smartcare-services.elasticbeanstalk.com/analytic.jsp\"  frameborder='0' width='800' height='600'/>";
 		analyticWebView.loadData(myHtml, "text/html", null);
 	}
 }
