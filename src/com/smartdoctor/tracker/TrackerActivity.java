@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.slidingmenu.lib.SlidingMenu;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.sails.engine.Beacon;
 import com.sails.engine.LocationRegion;
 import com.sails.engine.SAILS;
